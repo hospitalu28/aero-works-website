@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AERO-WORKS | Building Maintenance</title>
+  <meta name="description" content="Advanced exterior maintenance for high-rise buildings, glass façades and hard-to-reach surfaces.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202522;
+      background: #f7f7f4;
+    }
+    header {
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #dedfd9;
+    }
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+    .location {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #68716a;
+    }
+    main { padding: 100px 8% 90px; }
+    .eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #637767;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 1.04;
+      letter-spacing: -3px;
+      max-width: 900px;
+      font-weight: 600;
+      margin: 0 0 28px;
+    }
+    .intro {
+      max-width: 610px;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #626962;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 72px;
+    }
+    .service {
+      padding: 28px;
+      min-height: 155px;
+      border: 1px solid #dfe1da;
+      background: #fff;
+    }
+    .service h2 { font-size: 18px; font-weight: 600; }
+    .service p { color: #697069; line-height: 1.6; font-size: 14px; }
+    footer {
+      padding: 28px 8%;
+      border-top: 1px solid #dedfd9;
+      color: #697069;
+      font-size: 13px;
+    }
+    @media (max-width: 650px) {
+      header { padding: 22px 6%; }
+      .location { font-size: 10px; letter-spacing: 1px; }
+      main { padding: 70px 6%; }
+      h1 { letter-spacing: -1.5px; }
+      .services { grid-template-columns: 1fr; margin-top: 48px; }
+      footer { padding: 24px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">AERO-WORKS</div>
+    <div class="location">SCANDINAVIA</div>
+  </header>
 
+  <main>
+    <div class="eyebrow">Advanced exterior maintenance</div>
+    <h1>Building maintenance, from a new perspective.</h1>
+    <p class="intro">
+      Advanced exterior cleaning for high-rise buildings, glass façades
+      and hard-to-reach surfaces. We combine aerial and robotic technology
+      with professional cleaning systems to help maintain modern buildings.
+    </p>
+
+    <section class="services">
+      <article class="service">
+        <h2>Glass façades &amp; windows</h2>
+        <p>Professional cleaning solutions for modern buildings and extensive glazed surfaces.</p>
+      </article>
+      <article class="service">
+        <h2>Building exteriors</h2>
+        <p>Exterior surface care designed for challenging access and demanding environments.</p>
+      </article>
+      <article class="service">
+        <h2>Hard-to-reach surfaces</h2>
+        <p>Technology-led approaches to safer and more efficient exterior maintenance.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    AERO-WORKS · Building maintenance, from a new perspective.
+  </footer>
+</body>
+</html>
