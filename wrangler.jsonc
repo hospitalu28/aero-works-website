@@ -3,7 +3,6 @@
   "name": "aero-works-website",
   "compatibility_date": "2026-10-11",
   "assets": {
-    "directory": "./public",
-    "binding": "ASSETS"
+    "directory": "./public"
   }
 }
