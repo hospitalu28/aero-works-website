@@ -1,4 +1,3 @@
-
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "aero-works-website",
@@ -14,5 +13,8 @@
       "enabled": true,
       "invocation_logs": true
     }
+  },
+  "secrets": {
+    "required": ["RESEND_API_KEY"]
   }
 }
