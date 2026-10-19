@@ -1,69 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Technology-driven building inspection, cleaning and maintenance across Scandinavia.">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e7e9e7">
+  <meta name="description" content="AERO-WORKS combines aerial and robotic technology with professional cleaning systems for building exterior maintenance across Scandinavia.">
   <title>AERO-WORKS | Advanced Access for Building Maintenance</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <a class="logo" href="/">AERO-WORKS</a>
-  </header>
+  <main class="landing" id="top">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-wash" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Advanced access for building maintenance.</h1>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AERO-WORKS home">
+        <span class="brand-name"><span class="brand-light">AERO-</span><span class="brand-work">WORKS</span></span>
+        <span class="brand-tagline">ADVANCED ACCESS FOR BUILDING MAINTENANCE</span>
+      </a>
+    </header>
 
-        <p>
-          AERO-WORKS provides technology-driven solutions for the inspection,
-          cleaning and maintenance of high-rise buildings, glass facades and
-          any type of hard-to-reach exterior surfaces.
-        </p>
-
-        <p>
-          Combining aerial and robotic systems with professional cleaning
-          equipment, we offer practical alternatives to conventional access
-          methods — making challenging maintenance work more efficient and
-          less disruptive.
-        </p>
-
-        <p class="region">
-          For property owners, facility managers and commercial buildings
-          across Scandinavia.
-        </p>
-
-        <div class="approach">
-          <h2>Building maintenance. A different approach.</h2>
-
-          <p>
-            From facade cleaning to complex, hard-to-reach areas, we deliver
-            tailored maintenance solutions for every building.
-          </p>
-        </div>
-
-        <div class="contact">
-          <h2>Get in touch</h2>
-
-          <p>
-            Have a building maintenance challenge? Let's discuss your project.
-          </p>
-
-          <a href="mailto:hello@aero-works.no">
-            hello@aero-works.no
-          </a>
-        </div>
+    <section class="hero-content" aria-labelledby="hero-title">
+      <div class="eyebrow-line" aria-hidden="true"></div>
+      <h1 id="hero-title">Advanced access<br>for building<br>maintenance.</h1>
+      <p>AERO-WORKS combines aerial and robotic technology with professional cleaning systems to provide practical solutions for exterior cleaning, inspection and maintenance.</p>
+      <p>Our approach offers alternatives to conventional access methods where suitable — helping reduce equipment requirements, operational disruption and maintenance complexity.</p>
+      <p class="audience">For property owners, facility managers and commercial properties across Scandinavia.</p>
+      <div class="approach">
+        <h2>Building maintenance. A different approach.</h2>
+        <p>From facade cleaning to complex, hard-to-reach areas, we deliver tailored solutions based on each building's specific requirements.</p>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <!-- Image will be added here later -->
+      <div class="contact-copy">
+        <h2>Get in touch</h2>
+        <p>Have a building maintenance challenge? Let's explore the right approach for your project.</p>
+        <button class="discuss-button" type="button" id="open-discuss">
+          <span>Discuss your building</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M7 5h12v12"/></svg>
+        </button>
       </div>
     </section>
+
+    <button class="mail-button" type="button" id="open-contact">
+      <span>Mail us</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M7 5h12v12"/></svg>
+    </button>
+
+    <div class="hero-signature" aria-label="The right access. For every challenge.">
+      <span>THE RIGHT ACCESS.</span>
+      <strong>FOR EVERY CHALLENGE.</strong>
+    </div>
   </main>
+
+  <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-title">
+    <div class="contact-dialog-header">
+      <div><span class="modal-kicker">AERO-WORKS / CONTACT</span><h2 id="contact-title">Let's discuss your project.</h2></div>
+      <button type="button" class="contact-close" id="close-contact" aria-label="Close contact form">×</button>
+    </div>
+    <p>Have a building maintenance challenge? Let's explore the right approach for your project.</p>
+    <form id="contact-form">
+      <label for="contact-name">Name *</label><input id="contact-name" name="name" type="text" autocomplete="name" required>
+      <label for="contact-company">Company</label><input id="contact-company" name="company" type="text" autocomplete="organization">
+      <label for="contact-email">Email *</label><input id="contact-email" name="email" type="email" autocomplete="email" required>
+      <label for="contact-phone">Phone number *</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+      <label for="contact-subject">Subject</label><input id="contact-subject" name="subject" type="text">
+      <label for="contact-message">Message *</label><textarea id="contact-message" name="message" rows="4" required></textarea>
+      <button type="submit" class="contact-submit">Send message <span aria-hidden="true">↗</span></button>
+      <p id="contact-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="email-fallback">Or email <a href="mailto:hello@aero-works.no">hello@aero-works.no</a></p>
+  </dialog>
+  <script>
+    const contactDialog = document.getElementById('contact-dialog');
+    const openContact = document.getElementById('open-contact');
+    const closeContact = document.getElementById('close-contact');
+    const openDiscuss = document.getElementById('open-discuss');
+    const contactForm = document.getElementById('contact-form');
+    openContact.addEventListener('click', () => contactDialog.showModal());
+    openDiscuss.addEventListener('click', () => contactDialog.showModal());
+    closeContact.addEventListener('click', () => contactDialog.close());
+    contactDialog.addEventListener('click', event => { if (event.target === contactDialog) contactDialog.close(); });
+    
+contactForm.addEventListener('submit', async event => {
+  event.preventDefault();
+
+  const status = document.getElementById('contact-status');
+  const submitButton = contactForm.querySelector('[type="submit"]');
+
+  status.textContent = 'Sending your message...';
+  if (submitButton) submitButton.disabled = true;
+
+  try {
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) {
+      throw new Error('Sending failed');
+    }
+
+    status.textContent = 'Thank you! Your message has been sent successfully.';
+    contactForm.reset();
+
+  } catch (error) {
+    status.textContent = 'Message could not be sent. Please email hello@aero-works.no directly.';
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+});
+
+  </script>
 </body>
 </html>
