@@ -13,8 +13,5 @@
       "enabled": true,
       "invocation_logs": true
     }
-  },
-  "secrets": {
-    "required": ["RESEND_API_KEY"]
   }
 }
