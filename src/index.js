@@ -68,7 +68,11 @@ export default {
           "Message:",
           message
         ].join("\n");
-
+console.log("Resend key check:", {
+  exists: typeof env.RESEND_API_KEY === "string",
+  validPrefix: env.RESEND_API_KEY?.startsWith("re_"),
+  length: env.RESEND_API_KEY?.length
+});
         const resendResponse = await fetch(
           "https://api.resend.com/emails",
           {
