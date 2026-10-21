@@ -53,3 +53,20 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--lime);outline-offse
 @media(max-height:800px) and (min-width:801px){.hero-content{gap:clamp(4px,.6vh,7px)}.hero-content p{font-size:clamp(13.5px,min(1.13vw,1.9vh),16px);line-height:1.32}.discuss-button{padding:10px 18px;margin-top:6px}}
 @media(max-height:650px) and (min-width:801px){.hero-content{gap:3px}.hero-content p{font-size:12.5px;line-height:1.25}.discuss-button{padding:8px 15px;margin-top:4px;font-size:12px}.mail-button{top:clamp(100px,20vh,145px)}}
 @media(max-width:800px){.mail-button{top:24px;bottom:auto;right:22px;min-width:0;padding:11px 13px;font-size:12px}.hero-content{gap:14px}.hero-content p{font-size:15.5px;line-height:1.5}.discuss-button{margin-top:12px;padding:13px 20px}}
+/* Mobile visual refinements */
+@media (max-width: 800px) {
+  .hero-photo {
+    background-size: auto 108%;
+    background-position: 61% center;
+  }
+
+  .hero-signature {
+    right: 22px;
+    bottom: 24px;
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: right;
+    max-width: calc(100% - 44px);
+    padding: 10px 12px;
+  }
+}
